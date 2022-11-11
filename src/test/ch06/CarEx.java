@@ -27,6 +27,7 @@ public class CarEx {
 		System.out.println(car3.color);
 		
 //		실행 순서를 이해해야 한다...~!
+//		설명 또 놓침 ~! 나레기`~~~~~
 		
 	}
 
