@@ -19,6 +19,7 @@ public class CarEx {
 		Car car2 = new Car("자가용");
 		System.out.println(car2.model);
 		System.out.println(car2.color);
+		System.out.println(car2.maxSpeed);
 		
 		System.out.println("=====================");
 

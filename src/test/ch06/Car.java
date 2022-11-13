@@ -1,7 +1,7 @@
 package test.ch06;
 
 public class Car {
-//	1. 필드: 객체의 데이터를 저장
+//	1. 필드: 객체의 데이터를 저장 (멤버 변수)
 //	필드는 로컬 변수와는 다름(변수와 역할은 같지만)! 객체 내부에서 쓰거나 객체를 통해서만 쓸 수 있다.
 	String company = "현대자동차";
 	String model;
@@ -11,11 +11,11 @@ public class Car {
 //	boolean start;	//시동 여부
 
 	
-//	생성자 오버로드
+//	생성자 오버로드 (두 개 이상의 생성자, 같은 이름의 메소드를 여러 개 선언)
 	Car(String model) {
 //		this.model = model;
 //		Car(String model, String color, int maxSpeed) 이 부분 호출
-		this(model, "은색", 250);
+		this(model, "은색", 350);
 	}
 	
 	Car(String model, String color) {
