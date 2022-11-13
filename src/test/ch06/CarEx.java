@@ -5,7 +5,7 @@ public class CarEx {
 	public static void main(String[] args) {
 //		1. 객체 생성 
 //		객체 외부에서 접근할 때는 myCar.model 와 같은 식으로 접근해야 함.
-//		객체가 생성될 때 객체가 실행된다. (Car의 매개 변수?에 아래의 값이 들어감)
+//		객체가 생성될 때 필드가 실행된다. (Car의 매개 변수?에 아래의 값이 들어감)
 		Car myCar = new Car("그랜저", "검정", 250);
 		
 		System.out.println(myCar.company);
