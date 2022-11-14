@@ -37,11 +37,11 @@ public class Ex_05 {
 //		System.out.println("최댓값: " + max);
 		
 //		9번. 중첩for문
-		int[][] array = {
-				{95, 86},
-				{83, 92, 96},
-				{78, 83, 93, 87, 88}
-		};
+//		int[][] array = {
+//				{95, 86},
+//				{83, 92, 96},
+//				{78, 83, 93, 87, 88}
+//		};
 		
 //		System.out.println(array[0][0]);
 //		int num = 0;
