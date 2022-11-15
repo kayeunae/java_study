@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Ex_04 {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 
 //		1번.
@@ -262,6 +263,7 @@ public class Ex_04 {
 			System.out.println();
 		}
 		System.out.println("프로그램 종료");
+		
 		
 		
 		

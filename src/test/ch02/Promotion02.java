@@ -1,14 +1,13 @@
 package test.ch02;
 
-public class Promotion(2) {
+public class Promotion02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		//자동 형변환(Upcasting)
-//		byte byteValue = 10;
-//		int intValue = byteValue;
-//		System.out.println(intValue);
+		byte byteValue = 10;
+		int intValue = byteValue;
+		System.out.println(intValue);
 //		
 //		char charValue = '가';
 //		intValue = charValue;
