@@ -1,4 +1,4 @@
-package ex;
+package self;
 
 public class GameEx {
 

@@ -1,4 +1,4 @@
-package ex;
+package ex.ch0345;
 
 import java.util.Scanner;
 

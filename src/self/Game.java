@@ -1,4 +1,4 @@
-package ex;
+package self;
 
 public class Game {
 	String name;
@@ -22,9 +22,5 @@ public class Game {
 	Game() {}
 	
 	
-	 static int attack(int x) {
-		 Game myGame = new Game();
-		 
-		 return hp - x;
-	 }
+
 }

@@ -1,4 +1,4 @@
-package ex;
+package ex.ch06;
 
 public class MemberService {
 	// 필드
@@ -19,16 +19,16 @@ public class MemberService {
 
 	// 메소드
 	boolean login(String id, String password) {
-		if (id == "hong" && password == "12345") {
+		//== : 주소값 비교, equals 메소드 : 리터럴 비교
+		if (id.equals("hong") && password.equals("12345")) {
 			return true;
 		} else {
 			return false;
 		}
 	}
 
-	boolean logout(String id) {
+	void logout(String id) {
 		System.out.println(id + "님이 로그아웃 되었습니다.");
-		return true;
 	}
 
 }

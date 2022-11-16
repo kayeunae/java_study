@@ -1,4 +1,4 @@
-package ex;
+package ex.ch0345;
 
 public class Ex_03 {
 
