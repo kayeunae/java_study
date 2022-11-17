@@ -3,22 +3,19 @@ package ex.ch06;
 public class Example21 {
 
 	static int max(int[] arr) {		
-		if (arr == null) {
-			return -999999;
-		} else if (arr.length == 0) {
+		if (arr == null || arr.length == 0) {
 			return -999999;
 		}
-		
-		//max를 0 값으로 주면 배열에 음수가 있을 때 문제됨 ! 배열의 첫 번째 값으루...
-		int max = arr[0];
+		//maxNum을 0 값으로 주면 배열에 음수가 있을 때 문제됨 ! 배열의 첫 번째 값으루...
+		int maxNum = arr[0];
 		for(int i = 0; i < arr.length; i++) {
-			if(arr[i] > max) {
-				max = arr[i];
-			} else if (arr[i] < max) {
-				max = max;
+			if(arr[i] > maxNum) {
+				maxNum = arr[i];
+			} else if (arr[i] < maxNum) {
+				maxNum = maxNum;
 			}
 		}
-		return max;	
+		return maxNum;	
 	}
 	
 	public static void main(String[] args) {
