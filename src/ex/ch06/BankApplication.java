@@ -78,6 +78,13 @@ public class BankApplication {
 	}
 
 	// 3. 예금
+	//계좌번호, 예금액 입력받기 (scanner)
+	//계좌번호로 계좌를 찾아야 한다.
+	// => Account account = findAccount(ano) 호출
+	//찾은 계좌에 예금을 해준다.
+	// => account.setBalance(account.getBalance() + 예금액);
+	 
+	 
 	public static void deposit() {
 		System.out.println("---------");
 		System.out.println("예금");
@@ -86,6 +93,7 @@ public class BankApplication {
 		System.out.println("계좌번호: ");
 		String ano = scanner.next();
 		findAccount(ano);
+		System.out.println(ano);
 
 	}
 
@@ -94,6 +102,23 @@ public class BankApplication {
 	}
 
 	//5. accountArray 배열에서 ano와 동일한 Account 객체를 찾는 역할을 한다.
+	private static BankAccount findAccount(String ano) {
+		BankAccount account = null;	//Account 타입의 account 변수 생성
+		
+		for(int i = 0; i < accountArray.length; i++) {
+			if(accountArray[i] != null) {	//null이 아니면 계좌가 있다
+				//불러온 계좌 안에 있는 계좌 번호와 매개변수로 받아온 계좌번호 ano가 같은지 체크
+				String dbAno = accountArray[i].getAno();
+				if(dbAno.equals(ano)) {
+					account = accountArray[i];
+					break;
+				}
+			}
+		}
+		return account;
+	}
+	
+	/* 내가 짠 거...
 	private static Account findAccount(String ano) {
 		for(int i = 0; i < accountArray.length; i++) {
 			if (!ano.equals(accountArray[i].getAno())) {
@@ -103,5 +128,6 @@ public class BankApplication {
 		}
 		return null;
 	}
+	*/
 	
 }
