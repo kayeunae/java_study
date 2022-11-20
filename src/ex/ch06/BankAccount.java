@@ -6,7 +6,7 @@ public class BankAccount {
 	private String owner;	//계좌주
 	private int balance;	//잔고
 	
-	//생성자(객체가 생성될 때 초기화 시킬 코드)
+	//생성자(객체가 생성될 때 초기화 시킬 코드) //생성자로 setter의 역할을 하고 있음...
 	public BankAccount(String ano, String owner, int balance) {
 		this.ano = ano;
 		this.owner = owner;

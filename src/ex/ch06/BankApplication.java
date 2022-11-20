@@ -13,9 +13,9 @@ public class BankApplication {
 		
 		boolean run = true;
 		while(run) {
-		System.out.println("----------------------------------------");
+		System.out.println("-----------------------------------------");
 		System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 |5.종료");
-		System.out.println("----------------------------------------");
+		System.out.println("-----------------------------------------");
 		System.out.print("선택> ");
 		int selectNo = scanner.nextInt();
 		
@@ -90,35 +90,104 @@ public class BankApplication {
 		System.out.println("예금");
 		System.out.println("---------");
 		
-		System.out.println("계좌번호: ");
+		System.out.print("계좌번호: ");
 		String ano = scanner.next();
-		findAccount(ano);
-		System.out.println(ano);
+		
+//		findAccount(ano);
+		
+		BankAccount result = findAccount(ano); 
+		
+		if( result != null)
+		{
+			System.out.println("계좌번호: " + result.getAno() + " 계좌주: " + result.getOwner() + " 잔고: " + result.getBalance());
+			System.out.print("예금액: ");
+			int money = scanner.nextInt();
+			result.setBalance(result.getBalance() + money);
+			System.out.println("잔고: " + result.getBalance());
+		}
+		
+//		if(ano.equals(findAccount(ano).getAno())) {
+//			BankAccount account = findAccount(ano);
+//			System.out.println("계좌번호: " + account.getAno() + " 계좌주: " + account.getOwner() + " 잔고: " + account.getBalance());
+//			System.out.print("예금액: ");
+//			int money = scanner.nextInt();
+//			account.setBalance(account.getBalance() + money);
+//			System.out.println("잔고: " + account.getBalance());
+//		} else {
+//		System.out.println("일치하는 계좌가 없습니다.");
+//	}
+		
 
 	}
 
 	// 4. 출금
 	public static void withdraw() {
+		System.out.println("---------");
+		System.out.println("출금");
+		System.out.println("---------");
+		
+		System.out.print("계좌번호: ");
+		String ano = scanner.next();
+//		findAccount(ano);
+//		BankAccount account = findAccount(ano);
+		
+		BankAccount result = findAccount(ano); 
+		
+		if( result != null)
+		{
+			System.out.println("계좌번호: " + result.getAno() + " 계좌주: " + result.getOwner() + " 잔고: " + result.getBalance());
+			System.out.print("출금액: ");
+			int money = scanner.nextInt();
+			result.setBalance(result.getBalance() - money);
+			System.out.println("잔고: " + result.getBalance());
+		}
+		
 	}
+		
+		
+//		if(ano.equals(findAccount(ano).getAno())) {	
+//			System.out.println("계좌번호: " + account.getAno() + " 계좌주: " + account.getOwner() + " 잔고: " + account.getBalance());
+//			System.out.print("출금액: ");
+//			int money = scanner.nextInt();
+//			account.setBalance(account.getBalance() - money);
+//			System.out.println("잔고: " + account.getBalance());
+//		}
 
 	//5. accountArray 배열에서 ano와 동일한 Account 객체를 찾는 역할을 한다.
-	private static BankAccount findAccount(String ano) {
-		BankAccount account = null;	//Account 타입의 account 변수 생성
+	private static BankAccount findAccount(String ano)
+	{
+		if(accountArray[0] == null)
+		{
+			System.out.println("계좌를 생성해 주십시오.");
+			return null;
+		}
+		BankAccount account = null;	//BankAccount 타입의 account 변수 생성
 		
-		for(int i = 0; i < accountArray.length; i++) {
-			if(accountArray[i] != null) {	//null이 아니면 계좌가 있다
+		for(int i = 0; i < accountArray.length; i++)
+		{		
+			if(accountArray[i] != null)
+			{	//null이 아니면 계좌가 있다
 				//불러온 계좌 안에 있는 계좌 번호와 매개변수로 받아온 계좌번호 ano가 같은지 체크
+				//dbAno : 계좌 배열에 들어있는 데이터
 				String dbAno = accountArray[i].getAno();
-				if(dbAno.equals(ano)) {
+				
+				if(dbAno.equals(ano))
+				{
+					//account : 불러온 계좌 정보(계좌번호, 이름, 초기 입금액)
 					account = accountArray[i];
+//					System.out.println("계좌번호: " + account.getAno() + " 계좌주: " + account.getOwner() + " 잔고: " + account.getBalance());
 					break;
-				}
+				} 
 			}
 		}
+		
+		if(account == null)
+		 System.out.println("일치하는 계좌가 없습니다.");
+		
 		return account;
 	}
 	
-	/* 내가 짠 거...
+	/* 내가 짠 거... ...미련뭔데
 	private static Account findAccount(String ano) {
 		for(int i = 0; i < accountArray.length; i++) {
 			if (!ano.equals(accountArray[i].getAno())) {
