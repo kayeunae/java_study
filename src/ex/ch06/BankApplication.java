@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BankApplication {
 	// 스캐너 객체 생성
 	private static Scanner scanner = new Scanner(System.in);
+	
 	//accountArray 에 BankAccount 타입의 객체 데이터를 배열로 넣는다. 
 	//계좌 객체를 담을 배열. 객체 배열의 초기값은 null !
 	private static BankAccount[] accountArray = new BankAccount[100];
@@ -97,7 +98,7 @@ public class BankApplication {
 		
 		BankAccount result = findAccount(ano); 
 		
-		if( result != null)
+		if(result != null)
 		{
 			System.out.println("계좌번호: " + result.getAno() + " 계좌주: " + result.getOwner() + " 잔고: " + result.getBalance());
 			System.out.print("예금액: ");
