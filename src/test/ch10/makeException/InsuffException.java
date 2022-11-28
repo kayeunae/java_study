@@ -5,6 +5,6 @@ public class InsuffException extends Exception {	//자바 자체에 있는 excep
 	}
 
 	public InsuffException(String message) {
-		super(message);
+		super(message); 
 	}
 }

@@ -5,7 +5,7 @@ public class Account {
 	private long balance;	//잔고
 	
 	//생성자
-	public Account() {}
+	public Account() {} 
 	
 	//메소드
 	public long getBalance() {

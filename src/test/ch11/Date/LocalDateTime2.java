@@ -13,7 +13,7 @@ public class LocalDateTime2 {
 		System.out.println("현재시간: " + now.format(dtf));
 		
 		LocalDateTime2 result1 = now.plusYears(1); //1년 더함
-		System.out.println(result1.format(dtf));
+		System.out.println(result1.format(dtf));e
 		
 		LocalDateTime2 result2 = now.minusMonths(2); //2개월 뺌
 		System.out.println(result2.format(dtf));
